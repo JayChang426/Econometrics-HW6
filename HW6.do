@@ -34,7 +34,36 @@ display _b[grant_second] // 0.50408042
 clear all
 use "ushouse_election.dta", clear
 graph twoway (scatter win_dem demvoteshare) // sharp RD with cut-off 0.5
-npregress kernel win_dem_t1 demvoteshare
 
+npregress kernel win_dem_t1 demvoteshare if demvoteshare <= 0.5
+rename _Mean_win_dem_t1 gr1
+egen cut_left = max(gr1)
+npregress kernel win_dem_t1 demvoteshare if demvoteshare >= 0.5
+rename _Mean_win_dem_t1 gr2
+egen cut_right = min(gr2)
+display cut_right - cut_left // = 0.39458507
+
+twoway (scatter win_dem_t1 demvoteshare if demvoteshare <= 0.5, mc(blue) msize(tiny)) ///
+(scatter win_dem_t1 demvoteshare if demvoteshare >= 0.5, mc(red) msize(tiny)) ///
+(line gr1 demvoteshare if demvoteshare <= 0.5, sort lc(blue) lw(medium)) ///
+(line gr2 demvoteshare if demvoteshare >= 0.5, sort lc(red) lw(medium) /// 
+title("RD Plot") ytitle("probability in winning the next election") leg(order(1 "non-incumbent" 2 "incumbent")))
+
+* alternative method to make the RD plot
 * net install rdrobust, from(https://raw.githubusercontent.com/rdpackages/rdrobust/master/stata) replace
-rdplot win_dem_t1 demvoteshare, c(0.5) // the RD plot
+rdplot win_dem_t1 demvoteshare, c(0.5) // alternative RD plot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

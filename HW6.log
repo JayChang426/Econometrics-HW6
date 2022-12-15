@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.29)  11 DEC 2022 15:01
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.29)  15 DEC 2022 21:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -657,6 +657,8 @@ Package fancyhdr Warning: \headheight is too small (13.0pt):
 [1
 
 ]
+File: RD plot_new.jpg Graphic file (type bmp)
+<RD plot_new.jpg>
 File: RD plot.jpg Graphic file (type bmp)
 <RD plot.jpg>
 
@@ -669,10 +671,10 @@ Package fancyhdr Warning: \headheight is too small (13.0pt):
 
 [2] (./HW6.aux) ) 
 Here is how much of TeX's memory you used:
- 15103 strings out of 476919
- 298209 string characters out of 5821840
+ 15109 strings out of 476919
+ 298311 string characters out of 5821840
  674057 words of memory out of 5000000
- 34884 multiletter control sequences out of 15000+600000
+ 34889 multiletter control sequences out of 15000+600000
  407360 words of font info for 60 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  85i,11n,91p,309b,459s stack positions out of 5000i,500n,10000p,200000b,80000s

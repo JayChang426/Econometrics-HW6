@@ -60,7 +60,13 @@
     \end{figure}
     \item Observations with $win\_dem = 1$ are largely different from observations with $win\_dem = 0$, that is, treatment and control groups are not "randomized". 
     The estimation will be biased since regions with $win\_dem = 1$ are composed of more voters preferring Democrats.
-    \item The jump is estimated to be {\color{red}?}
+    \item The jump is estimated to be 0.39458507 with calculations presented in the do-file.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.65\textwidth]{RD plot_new.jpg}
+    \end{figure}
+    An alternative way to make the RD plot is to use the rdrobust package as I presented in the do file. 
+    Output is as follows.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.65\textwidth]{RD plot.jpg}
